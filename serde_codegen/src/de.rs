@@ -725,7 +725,7 @@ fn deserialize_field_visitor(
         }
     } else {
         quote!({
-            let value = ::std::string::String::from_utf8_lossy(value);
+            let value = ::collections::string::String::from_utf8_lossy(value);
             Err(_serde::de::Error::#unknown_ident(&value))
         })
     };
